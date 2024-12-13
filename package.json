@@ -1,18 +1,7 @@
 {
-<<<<<<< HEAD
   "name": "project-dec24---glass-try-on",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
-=======
-  "name": "client",
-  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@mediapipe/camera_utils": "^0.3.1675466862",
@@ -34,6 +23,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -52,5 +45,4 @@
       "last 1 safari version"
     ]
   }
->>>>>>> 62f420c (UI updates)
 }
