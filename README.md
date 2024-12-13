@@ -1,10 +1,8 @@
 <h1>Virtual Try On Application - Glasses</h1>
-<hr><p>This project leverages advanced face detection technology to enable users to virtually try on glasses. It's designed to provide an engaging, interactive experience for both businesses and consumers.</p><h2>General Information</h2>
-<hr><ul>
-<li>
-<h4>Features</h4>
-</li>
-</ul>
+<hr><p>This project leverages advanced face detection technology to enable users to virtually try on glasses. It's designed to provide an engaging, interactive experience for both businesses and consumers.</p><h2>General Information</h2><ul>
+<hr><p>The Virtual Try On Application is an innovative solution for eyewear businesses to enhance their customer experience. By integrating cutting-edge technology, we offer a seamless and interactive way for users to try on glasses virtually, providing a true-to-life preview of how different styles will look on them.</p>
+
+<h2>Features</h2>
 <ul>
 <li>
 <p>Real-time face detection and landmark tracking</p>
@@ -22,9 +20,9 @@
 <p>Screenshot functionality to save and share try-on images</p>
 </li>
 </ul><ul>
-<li>
-<h4>Installation</h4>
-</li>
+
+<h2>Installation</h2>
+
 </ul>
 <p>To get started with the Glasses Try-On Application, follow these steps:</p>
 <ol>
@@ -32,9 +30,9 @@
 <li><strong>Install dependencies:</strong><code>npm install </code></li>
 <li><strong>Start the development server:</strong> <code>npm start </code></li>
 </ol><ul>
-<li>
-<h4>Usage</h4>
-</li>
+
+<h2>Usage</h2>
+
 </ul>
 <ol>
 <li>
