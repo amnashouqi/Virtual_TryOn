@@ -2,19 +2,30 @@ import React, { useRef, useEffect, useState } from "react";
 import { FaceMesh } from "@mediapipe/face_mesh";
 import { Camera } from "@mediapipe/camera_utils";
 import './style.css';
-
-
 const FaceDetection = () => {
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
     const [glassesStyle, setGlassesStyle] = useState("/assets/glasses.png");
     const [preloadedImages, setPreloadedImages] = useState({});
+    const [loading, setLoading] = useState(false); // Step 1: Add loading state
 
     const appendLog = (message) => {
         const logElement = document.getElementById("debugLogs");
         const timestamp = new Date().toLocaleTimeString();
         logElement.innerText += `[${timestamp}] ${message}\n`;
         logElement.scrollTop = logElement.scrollHeight;
+    };
+
+    // Function to apply glasses style (simulated processing)
+    const applyGlasses = (style) => {
+        setLoading(true); // Step 2: Set loading to true when processing starts
+        setGlassesStyle(style);
+
+        // Simulate processing delay (replace this with your actual frame processing logic)
+        setTimeout(() => {
+            setLoading(false); // Step 3: Set loading to false after processing is done
+            // Here you can update canvas or do other operations after the glasses are applied
+        }, 2000); // Simulating a 2-second processing time
     };
 
     useEffect(() => {
@@ -97,7 +108,7 @@ const FaceDetection = () => {
 
                     const angle = Math.atan2(rightY - leftY, rightX - leftX);
                     canvasCtx.save();
-                    canvasCtx.translate(noseBridge.x * canvasWidth, (noseBridge.y * canvasHeight)+15);
+                    canvasCtx.translate(noseBridge.x * canvasWidth, (noseBridge.y * canvasHeight) + 15);
                     canvasCtx.rotate(angle);
                     canvasCtx.drawImage(img, -glassesWidth / 2, -glassesHeight / 2, glassesWidth, glassesHeight);
                     canvasCtx.restore();
@@ -136,28 +147,37 @@ const FaceDetection = () => {
 
     return (
         <div className="container">
+            <header className="header">
+                <h1>Enhance Your Look with Stylish Glasses</h1>
+                <p className="subheading">Select a pair of glasses and see how they fit your style.</p>
+            </header>
             <div className="video-wrapper">
                 <video ref={videoRef} />
                 <canvas ref={canvasRef} width={640} height={480} />
             </div>
-            <div className="button-container"> 
-                <button onClick={() => setGlassesStyle("/assets/glasses1.png")}> 
-                    <img src="/assets/glasses1.png" alt="Style 1" /> 
-                </button> 
-                <button onClick={() => setGlassesStyle("/assets/glasses2.png")}> 
-                    <img src="/assets/glasses2.png" alt="Style 2" /> 
-                </button> 
-                <button onClick={() => setGlassesStyle("/assets/glasses3.png")}> 
-                    <img src="/assets/glasses3.png" alt="Style 3" /> 
-                </button> 
-                <button onClick={() => setGlassesStyle("/assets/glasses4.png")}> 
-                    <img src="/assets/glasses4.png" alt="Style 4" /> 
-                </button> 
-                <button onClick={() => setGlassesStyle("/assets/glasses5.png")}> 
-                    <img src="/assets/glasses5.png" alt="Style 5" /> 
-                </button> 
+            <div className="button-container">
+                <button onClick={() => applyGlasses("/assets/glasses1.png")}>
+                    <img src="/assets/glasses1.png" alt="Style 1" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses2.png")}>
+                    <img src="/assets/glasses2.png" alt="Style 2" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses3.png")}>
+                    <img src="/assets/glasses3.png" alt="Style 3" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses4.png")}>
+                    <img src="/assets/glasses4.png" alt="Style 4" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses5.png")}>
+                    <img src="/assets/glasses5.png" alt="Style 5" />
+                </button>
                 <button className="save" onClick={saveImage}>Save Image</button>
+            </div>
+            {loading && (
+                <div className="loading-overlay">
+                    <div className="spinner"></div>
                 </div>
+            )}
             <div id="debugLogs">
                 Debug Logs:
             </div>

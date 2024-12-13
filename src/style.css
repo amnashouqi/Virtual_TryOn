@@ -128,3 +128,197 @@ button img {
     background-color: rgba(0, 0, 255, 0.8);
     transform: scale(1.1);
 }
+/* Loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;  /* Ensure it appears on top */
+  }
+  
+  /* Spinner animation */
+  .spinner {
+    border: 8px solid #f3f3f3;  /* Light gray border */
+    border-top: 8px solid #3498db;  /* Blue color for the spinner */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;  /* Infinite spinning animation */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.save {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save:hover {
+    background-color: darkblue;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e1e1e1;
+    margin-bottom: 20px;
+    margin-top: 300px;
+}
+
+.header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.header p.subheading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    font-weight: 300;
+}
+
+/* Styling for the buttons */
+button {
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    background-color: #cbe5f7;
+    color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+button:active {
+    background-color: #2980b9;
+}
+
+/* Style for the video and canvas container */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Save button */
+.save {
+    background-color: #2e82cc;
+    font-size: 18px;
+}
+
+.save:hover {
+    background-color: #194dc6;
+}
+
+/* Loading spinner */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #2980b9;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
