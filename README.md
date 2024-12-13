@@ -1,74 +1,62 @@
-<<<<<<< HEAD
-# Virtual_TryOn
-=======
-# Getting Started with Create React App
+<h1>Virtual Try On Application - Glasses</h1>
+<hr><p>This project leverages advanced face detection technology to enable users to virtually try on glasses. It's designed to provide an engaging, interactive experience for both businesses and consumers.</p><h2>General Information</h2>
+<hr><p>The Virtual Try On Application is an innovative solution for eyewear businesses to enhance their customer experience. By integrating cutting-edge technology, we offer a seamless and interactive way for users to try on glasses virtually, providing a true-to-life preview of how different styles will look on them.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Features</h2>
+<ul>
+<li>
+<p>Real-time face detection and landmark tracking</p>
+</li>
+<li>
+<p>Virtual try-on for different styles of glasses</p>
+</li>
+<li>
+<p>High-quality rendering and accurate scaling</p>
+</li>
+<li>
+<p>User-friendly interface with modern design</p>
+</li>
+<li>
+<p>Screenshot functionality to save and share try-on images</p>
+</li>
+</ul>
 
-## Available Scripts
+<h2>Installation</h2>
 
-In the project directory, you can run:
+<p>To get started with the Glasses Try-On Application, follow these steps:</p>
+<ol>
+<li><strong>Clone the repository:</strong></li>
+<li><strong>Install dependencies:</strong><code>npm install </code></li>
+<li><strong>Start the development server:</strong> <code>npm start </code></li>
+</ol>
 
-### `npm start`
+<h2>Usage</h2>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 62f420c (UI updates)
+<ol>
+<li>
+<p><strong>Load the application in your web browser:</strong> Open your web browser and navigate to <code>http://localhost:3000</code>.</p>
+</li>
+<li>
+<p><strong>Choose a style:</strong> Click on one of the style buttons to apply the corresponding glasses to your face.</p>
+</li>
+<li>
+<p><strong>Save your look:</strong> Click the "Save Image" button to capture a screenshot of your try-on.</p>
+</li>
+</ol><h2>Technologies Used</h2>
+<hr><ul>
+<li>HTML</li>
+</ul><ul>
+<li>CSS</li>
+</ul><ul>
+<li>JavaScript</li>
+</ul><ul>
+<li>React</li>
+</ul><ul>
+<li>jQuery</li>
+</ul><ul>
+<li>Mediapipe</li>
+</ul><ul>
+<li>Webcam-easy</li>
+</ul><h2>Project Status</h2>
+<hr><p>In Progress</p><h2>Contact</h2>
+<hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/amna-shouqi-a43886291/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a><span style="margin-right: 30px;"></span><a href="https://github.com/amnashouqi/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a></p>
