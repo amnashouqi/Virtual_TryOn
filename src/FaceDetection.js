@@ -46,6 +46,16 @@ const FaceDetection = () => {
             "/assets/glasses3.png",
             "/assets/glasses4.png",
             "/assets/glasses5.png",
+            "/assets/glasses6.png",
+            "/assets/glasses7.png",
+            "/assets/glasses8.png",
+            "/assets/glasses9.png",
+            "/assets/glasses10.png",
+            "/assets/glasses11.png",
+            "/assets/glasses12.png",
+            "/assets/glasses13.png",
+            "/assets/glasses14.png",
+            "/assets/glasses15.png",
         ]);
 
         const loadFaceMesh = async () => {
@@ -170,6 +180,36 @@ const FaceDetection = () => {
                 </button>
                 <button onClick={() => applyGlasses("/assets/glasses5.png")}>
                     <img src="/assets/glasses5.png" alt="Style 5" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses6.png")}>
+                    <img src="/assets/glasses6.png" alt="Style 6" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses7.png")}>
+                    <img src="/assets/glasses7.png" alt="Style 7" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses8.png")}>
+                    <img src="/assets/glasses8.png" alt="Style 8" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses9.png")}>
+                    <img src="/assets/glasses9.png" alt="Style 9" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses10.png")}>
+                    <img src="/assets/glasses10.png" alt="Style 10" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses11.png")}>
+                    <img src="/assets/glasses11.png" alt="Style 11" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses12.png")}>
+                    <img src="/assets/glasses12.png" alt="Style 12" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses13.png")}>
+                    <img src="/assets/glasses13.png" alt="Style 13" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses14.png")}>
+                    <img src="/assets/glasses14.png" alt="Style 14" />
+                </button>
+                <button onClick={() => applyGlasses("/assets/glasses15.png")}>
+                    <img src="/assets/glasses15.png" alt="Style 15" />
                 </button>
                 <button className="save" onClick={saveImage}>Save Image</button>
             </div>

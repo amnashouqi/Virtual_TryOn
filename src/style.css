@@ -19,7 +19,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the content horizontally */
+    align-items: center;
 }
 
 .video-wrapper {
@@ -27,6 +27,10 @@ body {
     width: 640px;
     height: 480px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 video, canvas {
@@ -36,165 +40,76 @@ video, canvas {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-}
-
-.controls {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#debugLogs {
-    margin-top: 20px;
-    white-space: pre-wrap;
-    background: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    height: 100px;
-    overflow-y: auto;
-}
-.video-wrapper {
-    position: relative;
-}
-
-video, canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
     z-index: 1;
 }
 
 .controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
     position: relative;
     z-index: 2;
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}.button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
 }
 
 button {
-    background-color:rgba(255, 255, 255, 0.638);
     border: none;
-    margin: 0 10px;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s, background-color 0.3s;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.638);
+    color: white;
 }
 
 button:hover {
     transform: scale(1.1);
+    background-color: #3498db;
+}
+
+button:active {
+    background-color: #2980b9;
 }
 
 button img {
-    width: 50px;
+    width: 100px;
     height: auto;
     border-radius: 5px;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Ensure the image scales properly */
-}
-.save {
-    background-color: rgb(0, 115, 255);
-    border: none;
-    padding: 10px 20px; /* Add padding for better size */
-    color: white; /* Text color for visibility */
-    font-size: 16px; /* Text size */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-.save:hover {
-    background-color: rgba(0, 0, 255, 0.8);
-    transform: scale(1.1);
-}
-/* Loading overlay */
-.loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;  /* Ensure it appears on top */
-  }
-  
-  /* Spinner animation */
-  .spinner {
-    border: 8px solid #f3f3f3;  /* Light gray border */
-    border-top: 8px solid #3498db;  /* Blue color for the spinner */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;  /* Infinite spinning animation */
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  .button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-button {
-    background: none;
-    border: none;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-button:hover {
-    transform: scale(1.1);
-}
-
-button img {
-    width: 50px;
-    height: auto;
-    border-radius: 5px;
-    max-width: 100%;
-    max-height: 100%;
     object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.save-container {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .save {
-    background-color: blue;
+    background-color: #2e82cc;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 8px;
 }
 
 .save:hover {
-    background-color: darkblue;
+    background-color: #194dc6;
 }
 
 .loading-overlay {
@@ -203,18 +118,19 @@ button img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    width: 36px;
-    height: 36px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #2980b9;
     border-radius: 50%;
-    border-left-color: #09f;
+    width: 50px;
+    height: 50px;
     animation: spin 1s linear infinite;
 }
 
@@ -223,7 +139,6 @@ button img {
     100% { transform: rotate(360deg); }
 }
 
-/* Header styling */
 .header {
     text-align: center;
     padding: 30px 20px;
@@ -248,77 +163,13 @@ button img {
     font-weight: 300;
 }
 
-/* Styling for the buttons */
-button {
-    border: none;
-    padding: 12px 25px;
-    margin: 10px;
-    background-color: #cbe5f7;
-    color: white;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 400;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-    background-color: #3498db;
-}
-
-button:active {
-    background-color: #2980b9;
-}
-
-/* Style for the video and canvas container */
-.video-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-button img {
-    width: 50px;
-    height: auto;
+#debugLogs {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-/* Save button */
-.save {
-    background-color: #2e82cc;
-    font-size: 18px;
-}
-
-.save:hover {
-    background-color: #194dc6;
-}
-
-/* Loading spinner */
-.loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-}
-
-.spinner {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid #2980b9;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    height: 100px;
+    overflow-y: auto;
 }
